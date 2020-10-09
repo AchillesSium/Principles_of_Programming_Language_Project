@@ -180,39 +180,6 @@ def t_error(t):
     print("Illegal character '%s'" % t.value[0])
     t.lexer.skip(1)
 
-
-# Build the lexer
-# lexer = lex.lex()
-
-# # Test it out
-# data = '''
-#      3 + 4 * 10
-#        + -20 *2..,':$#.5    >< >= <= []{}() = !=
-#        ... aadfadf ...
-#        !dfsdsd435435433!
-#        != sheet
-#        sheet scalar range do done is while for if then else endif
-#     function subroutine return end print_sheet print_scalar print_range
-#     x = x + 3
-#     AK789
-#     i9_abc_
-#     _yfc57hg5gv
-#      '''
-
-# with open('animals.ss', 'r') as file:
-#     data = file.read().replace('\n', '')
-#
-#
-# # Give the lexer some input
-# lexer.input(data)
-#
-# # Tokenize
-# while True:
-#     tok = lexer.token()
-#     if not tok:
-#         break  # No more input
-#     print(tok)
-
 lexer = ply.lex.lex()
 
 # if this module/file is the first one started (the main module)
