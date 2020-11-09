@@ -362,6 +362,7 @@ def p_simple_expr(p):
 
     '''simple_expr : term
                    | IDENT plusminusexprs
+                   | atom
                    | simple_expr plusminusexprs term'''
 
 
@@ -449,7 +450,7 @@ if __name__ == '__main__':
         arg_parser.print_help()
     else:
         data = codecs.open( ns.file, encoding='utf-8' ).read()
-        result = parser.parse(data, lexer=lexesPractice.lexer, debug=False)
+        result = parser.parse(data, lexer=lexesPractice.lexer, debug=True)
         if result is None:
             print( 'syntax OK' )
 
